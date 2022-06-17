@@ -1,28 +1,63 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="todo">
+    <TodoHeader />
+
+    <div class="todo-main">
+      <todo-list ref="list" />
+    </div>
+
+    <TodoFooter />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoHeader from './components/TodoHeader.vue';
+import TodoList from './components/TodoList.vue';
+import TodoFooter from './components/TodoFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    TodoHeader,
+    TodoList,
+    TodoFooter,
+  },
+};
 </script>
 
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "~assets/style/var.less";
+/* ********** reset 分割线 ********** */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.todo {
+  border: 1px solid @color_border;
+  border-radius: @radius;
+  padding: 8px;
+  width: 600px;
+  margin: 50px auto 0;
+
+  &-main {
+    margin-top: 20px;
+  }
 }
 </style>

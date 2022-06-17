@@ -1,24 +1,11 @@
 # todo
 
-## Project setup
-```
-npm install
-```
+## 技术栈
 
-### Compiles and hot-reloads for development
-```
+`vue` `vuex` `less` `webpack配置` `localStorage`
+
+## 启动项目
+
+```shell
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
